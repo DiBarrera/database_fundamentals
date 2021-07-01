@@ -119,3 +119,76 @@ You will find the following files:
 ├── tags.sql
 └── use.sql
 ```
+
+
+
+<!-- Topics reviewed -->
+## Topics reviewed
+
+In this repository you will find sql files that were varied exercises to practice searching for data in databases in different ways. The topics are made up of the different ways to do these searches. Topics such as a brief history of databases, the different types of databases, services, and other fundamental topics for a better general understanding about databases were also included.
+This course was followed using MySQL Workbench.
+
+### Topics
+
+- What is a DataBase.
+- What is persistence.
+- Database types.
+- Types of services.
+- The twelve rules of Codd.
+- Entities and attributes.
+- Key entities, strong entities and weak entities.
+- Relational databases.
+- Cardinality in databases.
+- Entity–relationship model. ER Diagram.
+- Data types.
+- Constrains.
+- Database normal forms.
+
+
+
+<!-- Basics -->
+## Basics
+
+
+#### Data types
+| Data type      | Description                         |
+| ------------- | ------------------------------ |
+| Text.     | CHAR(n), VARCHAR(n), TEXT. |
+| Numbers.     | INTEGER, BIGINT, SMALLINT, DECIMAL(n,s), NUMERIC(n,s). |
+| Time / date.     | DATE, TIME, DATETIME, TIMESTAMP. |
+| Logics.     | BOOLEAN. |
+
+#### Constrains
+| Constrain      | Description                         |
+| ------------- | ------------------------------ |
+| PRIMARY KEY.     | Combination of NOT NULL and UNIQUE. |
+| FOREIGN KEY.     | Uniquely identify a tuple in another table. |
+| INDEX.     | Created by column to allow faster searches. |
+| NOT NULL.     | Ensures that the column does not have null values. |
+| UNIQUE.     | Ensures that each value in the column is not repeated. |
+| CHECK.     | Ensures that the value in the column meets a given condition. |
+| DEFAULT.     | Sets a default value when there is no specified value. | 
+
+#### Normal Forms in databases
+| NF      | Full name                         | Description                         |
+| ------------- | ------------------------------ | ------------------------------ |
+| 1NF.     | First Normal Form. | - Each table cell should contain a single value.
+- Each record needs to be unique. |
+| 2NF.     | Second Normal Form. | - Rule 1- Be in 1NF.
+- Rule 2- Single Column Primary Key that does not functionally dependant on any subset of candidate key relation. |
+| 3NF.     | Third Normal Form. | - Rule 1- Be in 2NF.
+- Rule 2- Has no transitive functional dependencies. |
+| 4NF.     | Fourth Normal Form. | - If no database table instance contains two or more, independent and multivalued data describing the relevant entity, then it is in 4th Normal Form. | 
+
+
+
+
+
+
+<!-- Acquired skills -->
+## Acquired skills
+
+- Better understanding of database.
+- Differentiation of the types of databases and services.
+- Identify entities then consider attributes.
+- Entity–relationship model.
