@@ -172,12 +172,9 @@ This course was followed using MySQL Workbench.
 #### Normal Forms in databases
 | NF      | Full name                         | Description                         |
 | ------------- | ------------------------------ | ------------------------------ |
-| 1NF.     | First Normal Form. | - Each table cell should contain a single value.
-- Each record needs to be unique. |
-| 2NF.     | Second Normal Form. | - Rule 1- Be in 1NF.
-- Rule 2- Single Column Primary Key that does not functionally dependant on any subset of candidate key relation. |
-| 3NF.     | Third Normal Form. | - Rule 1- Be in 2NF.
-- Rule 2- Has no transitive functional dependencies. |
+| 1NF.     | First Normal Form. | - Each table cell should contain a single value. <br>- Each record needs to be unique. |
+| 2NF.     | Second Normal Form. | - Rule 1- Be in 1NF. <br>- Rule 2- Single Column Primary Key that does not functionally dependant on any subset of candidate key relation. |
+| 3NF.     | Third Normal Form. | - Rule 1- Be in 2NF. <br>- Rule 2- Has no transitive functional dependencies. |
 | 4NF.     | Fourth Normal Form. | - If no database table instance contains two or more, independent and multivalued data describing the relevant entity, then it is in 4th Normal Form. | 
 
 
