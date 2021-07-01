@@ -57,7 +57,23 @@ $ git clone https://github.com/DiBarrera/database_fundamentals.git
 You will find the following files:
 
 - **From the root directory**, you will find all the files that served as exercises to search databases in SQL.
-- There are no dependencies, so nothing more is necessary than cloning it.
+
+### For this repository, MySQL was used
+
+- Download a local installation of an RDBMS.
+
+### There are two ways to access database handlers:
+
+- Install a relational database manager on a local machine.
+- Have special development environments or cloud services.
+#### For a database manager on a local machine.
+- Click on the next link https://dev.mysql.com/downloads/mysql/5.7.html#downloads to download the MySQL comunity server
+- Follow the steps for the installation.
+- Root is the main user who will have all the permissions and therefore in production environments you have to be very careful when configuring it.
+- Set the password for your Root account.
+- Be careful not to forget your MySQL Root password.
+
+
 
 **Tree**
 
@@ -143,6 +159,14 @@ This course was followed using MySQL Workbench.
 - Data types.
 - Constrains.
 - Database normal forms.
+- Relational Database Management System.
+- SQL History.
+- SQL and DDL (Data Definition Language).
+- DML (Data Manipulation Language).
+- Insert, Update, Delete, Select.
+- Query.
+- SELECT, FROM, WHERE, GROUP BY, ORDER BY, HAVING
+- Different types of databases.
 
 
 
@@ -177,15 +201,98 @@ This course was followed using MySQL Workbench.
 | 3NF.     | Third Normal Form. | - Rule 1- Be in 2NF. <br>- Rule 2- Has no transitive functional dependencies. |
 | 4NF.     | Fourth Normal Form. | - If no database table instance contains two or more, independent and multivalued data describing the relevant entity, then it is in 4th Normal Form. | 
 
+#### Creating a database
+```markdown
+CREATE DATABASE test_db;
 
+USE test_db;
+``` 
+#### Creating a table
+```markdown
+CREATE TABLE data (
+  data_id int,
+  data_name varchar(255),
+  data_attribute1 varchar(255),
+  data_attribute2 varchar(255)
+);
+``` 
 
+### Databases and Tables
+
+#### Creating a view
+```markdown
+CREATE VIEW data_attributes_details AS
+  SELECT data_name,
+FROM attributes_of_data
+WHERE another_attribute = "TheAttribute";
+``` 
+
+#### Alter a table
+```markdown
+ALTER TABLE data
+ADD more_attributes_for_data;
+
+ALTER TABLE data
+ALTER COLUMN more_attributes_for_data;
+
+ALTER TABLE data
+DROP COLUMN data_to_be_dropped;
+``` 
+
+#### Drop data
+```markdown
+DROP TABLE data;
+
+DROP DATABASE data_test;
+``` 
+
+### DML
+
+#### Insert
+```markdown
+INSERT INTO data (attribute_1, attribute_2, attribute_3)
+VALUES ('value_1', 'value_2', 'value_3');
+``` 
+
+#### Update
+```markdown
+UPDATE data
+SET attribute_1 = 'value_1'
+WHERE data_id = 1;
+``` 
+
+#### Delete
+```markdown
+DELETE FROM data
+WHERE data_id = 1;
+
+DELETE FROM data;
+``` 
+
+#### Select
+```markdown
+SELECT attribute_1, attribute_2
+FROM data;
+``` 
+
+#### Querys
+| Constrain      | Description                         |
+| ------------- | ------------------------------ |
+| SELECT.     | Select data. |
+| FROM.     | Origin of the data. |
+| WHERE.     | Filters or conditions for data searching. |
+| GROUP BY.     | Conditions to group the data. |
+| ORDER BY.     | Conditions to order the data. |
+| HAVING.     | Filters to apply on grouped data. |
 
 
 
 <!-- Acquired skills -->
 ## Acquired skills
 
-- Better understanding of database.
-- Differentiation of the types of databases and services.
-- Identify entities then consider attributes.
-- Entity–relationship model.
+- General Theory of Databases.
+- Understanding Relational Databases.
+- Understanding Non-Relational Databases.
+- Understanding Other types of Databases.
+- MySQL usage.
+- DML.
